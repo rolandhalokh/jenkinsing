@@ -1,2 +1,2 @@
 # jenkinsing
-grovvy repo for my jenkins
+groovy repo for my jenkins
