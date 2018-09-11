@@ -2,10 +2,6 @@
 
 package org.utils
 
-class echoStuff implements Serializable {
-    def echoStuff(task) {
-        doecho {
-          sh "echo ${task}"
-        }
-    }
+def echoStuff(task) {
+    sh "echo ${task}"
 }
