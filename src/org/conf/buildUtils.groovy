@@ -1,5 +1,11 @@
 package org.demo
 
+class Student {
+   int StudentID;
+   String StudentName;
+   } 
+}
+
 @NonCPS
 String generatePodname(String source) {
     // Convert percent-encoded characters to regular UTF-8 characters
