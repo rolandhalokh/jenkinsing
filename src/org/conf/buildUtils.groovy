@@ -1,12 +1,16 @@
 package org.demo
 
-class buildUtils implements Serializable {
-    def steps
-    buildUtils(steps) { this.steps = steps}
-       def timedGradleBuild(tasks) {
-       def gradleHome = steps.tool 'gradle3.2'
-       steps.timestamps {
-            steps.sh "${gradleHome}/bin/gradle ${tasks}"
-       }
-    }
+String generatePodname(String source) {
+    // Convert percent-encoded characters to regular UTF-8 characters
+    source = URLDecoder.decode(source, "UTF-8")
+    String randomString = (
+        (1..4).inject("") {
+            a, b -> a += ('a'..'z')[
+                new Random().nextFloat() * 26 as int
+            ]
+        }
+    )
+    String jobname = "minion-" + randomString + "-" + source.replaceAll("[^-A-Za-z0-9_]", "-")
+    jobname = jobname.take(63).replaceAll("-+\$", "")
+    return jobname
 }
