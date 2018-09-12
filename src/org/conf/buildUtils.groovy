@@ -1,4 +1,3 @@
-// org.demo.buildUtils
 package org.demo
 
 class buildUtils implements Serializable {
