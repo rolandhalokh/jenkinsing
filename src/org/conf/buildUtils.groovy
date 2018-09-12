@@ -1,5 +1,6 @@
 package org.demo
 
+@NonCPS
 String generatePodname(String source) {
     // Convert percent-encoded characters to regular UTF-8 characters
     source = URLDecoder.decode(source, "UTF-8")
