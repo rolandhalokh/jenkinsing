@@ -1,6 +1,6 @@
-package org.demo
+package org.conf
 
-class Employee{
+class Employee {
     String firstName
     String lastName
     Double salary
