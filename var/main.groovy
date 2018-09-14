@@ -1,4 +1,4 @@
-import org.conf.buildUtils
+import org.conf.main
 
 node {
        stage ('First Stage') {
