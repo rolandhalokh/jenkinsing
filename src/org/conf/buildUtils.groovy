@@ -1,7 +1,6 @@
 package org.conf
 
-@NonCPS
-class Employee {
+class Employee implements Serializable {
     String firstName
     String lastName
     Double salary
