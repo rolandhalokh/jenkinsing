@@ -1,6 +1,6 @@
 package org.conf
 
-class Employee implements Serializable {
+class Employee {
     String firstName
     String lastName
     Double salary
