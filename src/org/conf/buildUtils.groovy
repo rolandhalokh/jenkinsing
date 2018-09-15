@@ -1,7 +1,6 @@
+// src/org/demo/buildUtils.groovy
 package org.conf
 
-class Employee {
-    String firstName
-    String lastName
-    Double salary
+def showIt(task) {
+  sh "echo ${task}"
 }
